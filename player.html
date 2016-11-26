@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Spoty Player</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="player.css">
+    <script src="player.js"></script>
+  </head>
+    <body >
+
+       <!-- form -->
+        <div class="form text-center" style="margin-top: 50px">
+          <img src="https://lh3.googleusercontent.com/UrY7BAZ-XfXGpfkeWg0zCCeo-7ras4DCoRalC_WXXWTK9q5b0Iw7B0YQMsVxZaNB7DM=w300" style="width: 200px; height: 200px"/>
+          <form id="searcher" style="margin-top: 60px">
+            <input type="text" id="song" class="form-control form-control-success" style="display: inline-block; width: 30%" placeholder="Search a song...." required>
+            <input type="submit" class="btn btn-success" value="Search">
+          </form>
+        </div>
+
+    
+      <!-- list of songs -->
+        <div class="modal fade" id="playlist">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <button class="close" data-dismiss="modal">
+                  <span>&times;</span>
+                </button>
+
+                <h3 class="modal-title">
+                  <span>You are listening to: </span>
+                </h3>
+              </div><!-- .modal-header -->
+
+              <div class="modal-body">
+                  <div class="widget">
+                		<div class="header">
+                		<!-- Try adding/removing these classes: -->
+                		<!-- disabled -->
+                		<!-- playing -->
+                		<div class="btn-play playing"></div>
+
+                		<div class="metadata">
+                		  <p class="title"></p>
+                		  <p class="author"></p>
+                      <p class="album"></p>
+
+                		  <div class="seekbar">
+                		    <progress value="5" max="30"></progress>
+                		  </div>
+                		</div>
+                		</div>
+                		<div class="cover" style="margin-top: 50px">
+                		<img id="coverimg" style="position: relative; height: 300px">
+                		</div>
+
+                		<audio id="pretrack"></audio>
+
+                	</div>
+              </div><!-- .modal-body -->
+
+            </div><!-- .modal-content -->
+          </div><!-- .modal-dialog -->
+        </div><!-- .modal -->
+
+    </body>
+</html>

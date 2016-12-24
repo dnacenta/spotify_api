@@ -41,7 +41,9 @@ function showSong(response){
 //song progress bar
 function printTime () {
   var current = $('#pretrack').prop('currentTime');
+  console.log(current);
   $('.seekbar progress').prop('value', parseInt(current));
+
 
   if (parseInt(current) === 30){
     $('.seekbar progress').prop('value', 0)
